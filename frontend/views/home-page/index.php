@@ -8,6 +8,6 @@ $this->title = 'Газета Даром!';
 ?>
 <div class="banner_grid">
     <?php foreach ($banners as $banner) { ?>
-        <img class="position_<?= $banner->position ?>" src="images/<?= $banner->file_name ?>">
+    <img class="position_<?= $banner->position ?>" src="images/<?= $banner->file_name ?>">
     <?php } ?>
 </div>
