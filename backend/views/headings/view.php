@@ -28,10 +28,16 @@ $this->title = $model->name;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            //'id',
-            'record_state',
+            [
+                'attribute' => 'record_state',
+                'value' => $model->record_state == 1 ? 'Активно':'Неактивно',
+            ],
             'name',
-            'parent_id',
+            [
+                'attribute' => 'parent_id',
+                'value' => $model->parent_id != null ?
+                    $model->findOne($model->parent_id)->name : '',
+            ],
         ],
     ]) ?>
 

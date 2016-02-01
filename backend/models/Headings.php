@@ -46,4 +46,6 @@ class Headings extends \yii\db\ActiveRecord
             'parent_id' => 'Родительская категория',
         ];
     }
+
+
 }
